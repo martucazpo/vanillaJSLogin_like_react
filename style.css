@@ -13,6 +13,43 @@
     display: none;
 }
 
+.modal-display {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(127, 255, 212, .5);
+}
+
+.close-modal-div {
+    width: 100%;
+    max-width: 300px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.close-modal-div button {
+    margin-right: 1em;
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+
+.close-modal-div button:hover {
+    background-color: darkred;
+}
+
 #loginForm, #registrationForm {
     width: 100vw;
     max-width: 300px;
@@ -22,6 +59,7 @@
     padding: 1em;
     margin: 0.5em 0;
     font-size: 1em;
+    background-color: white;
 } 
 
 #loginForm input, #registrationForm input {

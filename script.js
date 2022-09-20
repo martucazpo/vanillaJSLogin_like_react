@@ -191,14 +191,15 @@ const handleModalToggle = () => {
 loginRegisterBtn.addEventListener("click", handleModalToggle);
 closeModalBtn.addEventListener("click", handleModalToggle);
 const checkModalStatus = () => {
-  if (state.modalOpen) {
+  if (!state.modalOpen) {
     modalDiv.classList.add("hidden");
-    modalDiv.classList.remove("hidden");
+    modalDiv.classList.remove("modal-display")
   } else {
     modalDiv.classList.remove("hidden");
-    modalDiv.classList.add("hidden");
+    modalDiv.classList.add("modal-display");
   }
 };
+checkModalStatus()
 const handleLoggout = (id) => {
   let statusChanged = state.users.map((user) => {
     if (user.id === id) {
@@ -323,8 +324,8 @@ const makeList = () => {
       messageDiv.append(messageh4)
       ul.append(li)
     } else {
-      li.innerHTML = `<h4>${user.firstName} ${user.lastName}</h4> STATUS: ${
-        user.loggedIn ? "LOGGED IN" : "LOGGED OUT"
+      li.innerHTML = `<h4>${user.firstName} ${user.lastName}</h4><h5>STATUS: ${
+        user.loggedIn ? "<span style='color:green;'>LOGGED IN</span><h5>" : "<span style='color:red;'>LOGGED OUT</span><h5>"
       }`;
       if (user.loggedIn) {
         let loggoutBtn = document.createElement("button");
