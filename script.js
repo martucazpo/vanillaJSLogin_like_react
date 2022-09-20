@@ -238,10 +238,8 @@ const handleToggleEdit = (id) => {
 const handleEditUser = (e) => {
   e.preventDefault();
   //check email
-  if (
-    state.users.filter((user) => user.email === state.email).length === 1 &&
-    user.id !== state.id
-  ) {
+  let offLimits = state.users.filter(user => user.email === state.email && user.id !== state.id)
+  if(offLimits.filter(user => user.email === state.email).length > 0){
     //will need to make dynamic message under the form
     setState({
       ...state,
