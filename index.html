@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <button id="login_register_btn">LOGIN</button>
+    </header>
+    <main>
+      <section id="modalDiv" class="hidden">
+        <div>
+          <button id="closeModalButton">X</button>
+        </div>
+        <article>
+          <div id="registrationFormDiv">
+            <h2>Register</h2>
+            <form id="registrationForm">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" required />
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" required />
+              <label for="regEmail">Email</label>
+              <input id="regEmail" name="email" required />
+              <label for="password1">Please enter a password</label>
+              <input id="password1" name="password1" required />
+              <label for="password2">Please re-enter password</label>
+              <input id="password2" name="password2" required />
+              <button type="submit">REGISTER</button>
+            </form>
+          </div>
+          <div id="loginFormDiv">
+            <h2>Login</h2>
+            <form id="loginForm">
+              <label for="logEmail">Email</label>
+              <input id="logEmail" name="email" required />
+              <label for="password">Password</label>
+              <input id="password" name="password" required />
+              <button type="submit">LOGIN</button>
+            </form>
+          </div>
+        </article>
+        <div>
+          <button id="formBtn"></button>
+        </div>
+        <div>
+          <h3 id="messageH3"></h3>
+        </div>
+      </section>
+      <section>
+        <header>
+          <h2>User Status</h2>
+        </header>
+        <div id="listDiv"></div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./bcrypt.min.js"></script>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+*, body, html, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    position: absolute;
+    top: -2000px;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    display: none;
+}
+
+#loginForm, #registrationForm {
+    width: 100vw;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 1em;
+    margin: 0.5em 0;
+    font-size: 1em;
+} 
+
+#loginForm input, #registrationForm input {
+    padding: 0.25em;
+    font-size: 1em;
+}
+
+#loginForm button, #registrationForm button {
+    padding: 0.25em;
+    margin-top: 0.25em;
+    font-size: 1em;
+}
